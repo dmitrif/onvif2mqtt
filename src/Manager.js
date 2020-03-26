@@ -47,7 +47,7 @@ export default class Manager {
         onvifDeviceId,
         eventType,
         eventState
-      }), { retain });
+      }), retain);
     });
   };
   
