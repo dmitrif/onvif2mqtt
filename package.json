@@ -1,0 +1,38 @@
+{
+  "name": "onvif-cam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "CONFIG_PATH=./config.dev.yml nodemon --exec babel-node src/index.js | pino-pretty",
+    "build": "babel src --out-dir dist/",
+    "start": "node dist/index.js",
+    "lint": "eslint ./src/**/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "async-mqtt": "2.5.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "6.8.0",
+    "eslint-config-airbnb": "18.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "lodash.at": "4.6.0",
+    "nodemon": "2.0.2",
+    "onvif": "0.6.2",
+    "pino": "5.17.0",
+    "pino-pretty": "3.6.1",
+    "yaml": "1.8.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.8.4",
+    "@babel/core": "7.9.0",
+    "@babel/node": "7.8.7",
+    "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-transform-runtime": "7.9.0",
+    "@babel/preset-env": "7.9.0",
+    "babel-loader": "8.1.0",
+    "eslint-plugin-babel": "5.3.0"
+  }
+}

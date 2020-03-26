@@ -1,0 +1,19 @@
+log: debug
+api:
+  templates:
+    - subtopic: json
+      template: >-
+        {
+          "device": "${onvifDeviceId}",
+          "event": "${eventType}"
+          "state": "${eventState}"
+        }
+mqtt:
+  host: 192.168.68.121
+  port: 1883
+onvif:
+  - name: doorbell
+    hostname: 192.168.68.124
+    port: 80
+    username: admin
+    password: SHAGCB
