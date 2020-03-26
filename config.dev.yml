@@ -2,6 +2,7 @@ log: debug
 api:
   templates:
     - subtopic: json
+      retain: false
       template: >-
         {
           "device": "${onvifDeviceId}",

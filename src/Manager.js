@@ -41,13 +41,13 @@ export default class Manager {
     const templates = config.get('api.templates');
 
     templates.forEach(({
-      subtopic, template
+      subtopic, template, retain
     }) => {
       this.publisher.publish(onvifDeviceId, subtopic, interpolateTemplateValues(template, {
         onvifDeviceId,
         eventType,
         eventState
-      }));
+      }), { retain });
     });
   };
   
