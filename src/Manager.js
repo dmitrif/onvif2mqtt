@@ -40,14 +40,23 @@ export default class Manager {
   publishTemplates = (onvifDeviceId, eventType, eventState) => {
     const templates = config.get('api.templates');
 
+    if (!templates) {
+      return;
+    }
+
     templates.forEach(({
       subtopic, template, retain
     }) => {
-      this.publisher.publish(onvifDeviceId, subtopic, interpolateTemplateValues(template, {
+      const interpolationValues = {
         onvifDeviceId,
         eventType,
         eventState
-      }), retain);
+      };
+
+      const interpolatedSubtopic = interpolateTemplateValues(subtopic, interpolationValues);
+      const interpolatedTemplate = interpolateTemplateValues(template, interpolationValues);
+
+      this.publisher.publish(onvifDeviceId, interpolatedSubtopic, interpolatedTemplate, retain);
     });
   };
   
