@@ -1,12 +1,12 @@
 export default eventCallback => {
-  let currentMotionState = null;
+  let currentMotionStates = {};
 
   return (onvifDeviceId, motionState) => {
-    if (currentMotionState === motionState) {
+    if (currentMotionStates[onvifDeviceId] === motionState) {
       return;
     }
 
-    currentMotionState = motionState;
+    currentMotionStates[onvifDeviceId] = motionState;
     eventCallback(onvifDeviceId, motionState);
   };
 };
