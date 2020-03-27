@@ -4,6 +4,7 @@ import fs, { exists } from 'fs';
 import yaml from 'yaml';
 import process from 'process';
 import validator from './ConfigValidator';
+import merge from 'merge-deep';
 import logger, { setLoggingLevel } from './Logger';
 
 const DEFAULT_CONFIG_PATH = path.resolve(__dirname, '../default-config.yml');
@@ -67,13 +68,12 @@ class Config {
     const defaultConfig = this._loadDefaultConfig();
     const userConfig = this._loadUserConfig();
 
-    const mergedConfig = {
-      ...defaultConfig,
-      ...userConfig
-    };
+    const mergedConfig = merge(
+      defaultConfig,
+      userConfig
+    );
 
     this._validate(mergedConfig);
-
     return mergedConfig;
   };
 

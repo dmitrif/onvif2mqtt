@@ -28,6 +28,11 @@ const configSchema = new Schema({
     host: {
       required: true,
     },
+    port: {
+      required: true,
+    },
+    username: String,
+    password: String,
   },
   onvif: {
     type: Array,

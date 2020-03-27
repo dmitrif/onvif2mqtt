@@ -2,4 +2,5 @@ log: debug
 api:
   templates:
 mqtt:
+  port: 1883
 onvif:
