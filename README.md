@@ -1,5 +1,25 @@
 # ONVIF2MQTT
 
+## Table of Contents
+* [ONVIF2MQTT](#onvif2mqtt)
+  * [Purpose](#purpose)
+  * [Background](#background)
+  * [Requirements](#requirements)
+  * [Hardware Compatibility](#hardware-compatibility)
+  * [Supported Events](#supported-events)
+  * [Installation](#installation)
+    * [Docker](#docker)
+    * [Baremetal](#baremetal)
+  * [Configuration](#configuration)
+    * [Notes](#notes)
+    * [MQTT Notes](#mqtt-notes)
+    * [Templating / Custom Topics](#templating--custom-topics)
+    * [Schema](#schema)
+  * [Examples / Guides](#examples--guides)
+    * [Using with Shinobi](#using-with-shinobi)
+    * [Using with HomeAssistant](#using-with-homeassistant)
+    * [Getting Started / Sample Config](#getting--started)
+
 ## Purpose
 
 This package aims to implement a transformation layer between the ONVIF event stream (sourced from IP cameras / camera doorbells) and MQTT (a messaging protocol largely used in home automation). 
@@ -15,7 +35,7 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 - MQTT Broker
 - At least one ONVIF compatible device implementing events.
 
-## Hardware Compatibility.
+## Hardware Compatibility
 - EZViz DB1 Doorbell (flashed with LaView firmware) - **TESTED**
 - Nelly's Security Doorbell (NSC-DB2)
 - Laview Halo One Doorbell
@@ -126,7 +146,7 @@ onvif:
     password: admin
 ```
 
-### Examples / Guides
+## Examples / Guides
 
 ### Using with Shinobi
 
