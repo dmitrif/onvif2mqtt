@@ -8,7 +8,7 @@ Any number of ONVIF devices is supported.
 
 ## Background
 
-After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor on it. I was then dismayed to find out that there is no open API to consume the triggered status of it. This project was written to itch that scratch, but it should work for any other ONVIF compliant devices with built-in sensors.
+After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor on it. I was then dismayed to find out that there is no open API to consume the triggered status of it. This project was written to scratch that itch, but it should work for any other ONVIF compliant devices with built-in sensors.
 
 ## Requirements
 - Docker (unless running Baremetal)
