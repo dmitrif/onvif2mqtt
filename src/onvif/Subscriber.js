@@ -35,8 +35,10 @@ export default class OnvifSubscriber {
 
     this.logger.info(`Successfully connected.`);
 
-    this.cam.on('event', camMessage => {
-      this.onEvent(this.name, camMessage);
+    this.cam.createPullPointSubscription((err) => {
+      this.cam.on('event', camMessage => {
+        this.onEvent(this.name, camMessage);
+      });
     });
   };
 }

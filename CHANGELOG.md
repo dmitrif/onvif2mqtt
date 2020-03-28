@@ -1,3 +1,6 @@
+## 1.0.3
+- Manually create a PullPointSubscription for Hikvision cameras.
+
 ## 1.0.2
 - Fixed event debouncer to support multiple ONVIF devices.
 

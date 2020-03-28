@@ -1,6 +1,6 @@
 {
   "name": "onvif-cam",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Translates ONVIF events (from IP Cameras) to MQTT messages.",
   "main": "index.js",
   "scripts": {
