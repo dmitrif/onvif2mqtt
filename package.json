@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "CONFIG_PATH=./config.dev.yml nodemon -e js,yml --exec babel-node src/index.js | pino-pretty",
+    "dev": "cross-env CONFIG_PATH=./config.dev.yml nodemon -e js,yml --exec babel-node src/index.js | pino-pretty",
     "build": "babel src --out-dir dist/",
     "start": "node dist/index.js",
     "lint": "eslint ./src/**/*.js"
@@ -37,6 +37,7 @@
     "@babel/plugin-transform-runtime": "7.9.0",
     "@babel/preset-env": "7.9.0",
     "babel-loader": "8.1.0",
+    "cross-env": "^7.0.2",
     "eslint-plugin-babel": "5.3.0"
   }
 }
