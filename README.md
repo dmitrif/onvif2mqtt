@@ -36,7 +36,8 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 - At least one ONVIF compatible device implementing events.
 
 ## Hardware Compatibility
-- EZViz DB1 Doorbell (flashed with LaView firmware) - **TESTED**
+- EZViz DB-1 Doorbell (flashed with LaView firmware) - **TESTED**
+- EZViz DB-1 Doorbell (flashed with HikVision 200321 firmware) - **TESTED**
 - Nelly's Security Doorbell (NSC-DB2)
 - Laview Halo One Doorbell - **TESTED**
 - RCA HSDB2A Doorbell (flashed with LaView firmware)
