@@ -38,7 +38,7 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 ## Hardware Compatibility
 - EZViz DB-1 Doorbell (flashed with LaView firmware) - **TESTED**
 - EZViz DB-1 Doorbell (flashed with HikVision 200321 firmware) - **TESTED**
-- Nelly's Security Doorbell (NSC-DB2)
+- Nelly's Security Doorbell (NSC-DB2) (flashed with Nelly's v5.2.4 191216 firmware) - **TESTED**
 - Laview Halo One Doorbell - **TESTED**
 - RCA HSDB2A Doorbell (flashed with LaView firmware)
 - Hikvision DB2 - **Does not work, TODO: implement push point subscriptions.**
