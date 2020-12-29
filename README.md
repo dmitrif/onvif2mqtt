@@ -40,6 +40,10 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 - EZViz DB-1 Doorbell (flashed with HikVision 200321 firmware) - **TESTED**
 - Nelly's Security Doorbell (NSC-DB2) (flashed with Nelly's v5.2.4 191216 firmware) - **TESTED**
 - Laview Halo One Doorbell - **TESTED**
+- SV3C SV-B01POE-5MPL-A - **TESTED**
+- IMOU cue 2 - **TESTED**
+- Provision ISR I3-340IP536+ - **TESTED**
+- Provision ISR I4-340IP5MVF - **TESTED**
 - RCA HSDB2A Doorbell (flashed with LaView firmware)
 - Hikvision DB2 - **Does not work, TODO: implement push point subscriptions.**
 - Any other ONVIF compliant IP Camera - if it works for you please let me know so that this list can be updated.
