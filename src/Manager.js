@@ -49,6 +49,10 @@ export default class Manager {
     });
   };
 
+  deInitializeOnvifDevices = () => {
+
+  };
+
   publishTemplates = (onvifDeviceId, eventType, eventState) => {
     const templates = this.config.get('api.templates');
 
