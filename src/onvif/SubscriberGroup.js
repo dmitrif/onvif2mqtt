@@ -42,6 +42,14 @@ export default class SubscriberGroup {
     }));
   };
 
+  unSubscribe = () => {
+    this.subscribers.forEach((item) => {
+      item.cam = null;
+      item = null;
+    });
+    this.subscribers.length = 0;
+  };
+
   onSubscriberEvent = (subscriberName, event) => {
     const [namespace, eventType] = event.topic._.split(NAMESPACE_DELIMITER);
     

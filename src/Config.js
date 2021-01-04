@@ -79,7 +79,7 @@ class Config {
       let tempConfig = this._loadConfig();
       // Check if onvif device config changed. Only this change observe
       if (tempConfig?.onvif && this._config?.onvif) {
-        if (!isEqual(tempConfig?.onvif, this._config?.onvif)) {
+        if (!isEqual(tempConfig.onvif, this._config.onvif)) {
           this._config = tempConfig;
           callback();
         }

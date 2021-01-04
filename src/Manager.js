@@ -28,13 +28,14 @@ export default class Manager {
     await this.publisher.connect();
     await this.publisher.publish_service_status('ON');
 
+    this.subscriber = new OnvifSubscriberGroup();
     this.initializeOnvifDevicesFunctions();
 
     this.onExitSendStatus();
   };
 
   initializeOnvifDevicesFunctions = () => {
-    this.subscriber = new OnvifSubscriberGroup();
+    this.subscriber.unSubscribe();
     this.initializeOnvifDevices(this.config.get('onvif'));
     this.subscriber.withCallback(CALLBACK_TYPES.motion, this.onMotionDetected);
   };
@@ -47,10 +48,6 @@ export default class Manager {
 
       this.onMotionDetected(name, false);
     });
-  };
-
-  deInitializeOnvifDevices = () => {
-
   };
 
   publishTemplates = (onvifDeviceId, eventType, eventState) => {
@@ -77,7 +74,7 @@ export default class Manager {
   };
 
   /* Event Callbacks */
-  onMotionDetected = debounceStateUpdate((onvifDeviceId, boolMotionState) => {
+    onMotionDetected = debounceStateUpdate((onvifDeviceId, boolMotionState) => {
     const topicKey = 'motion';
 
     this.publishTemplates(onvifDeviceId, topicKey, boolMotionState);
