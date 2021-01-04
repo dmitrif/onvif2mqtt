@@ -42,7 +42,7 @@ export default class SubscriberGroup {
     }));
   };
 
-  unSubscribe = () => {
+  destroy = () => {
     this.subscribers.forEach((item) => {
       item.cam = null;
       item = null;

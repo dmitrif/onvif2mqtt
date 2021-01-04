@@ -35,7 +35,7 @@ export default class Manager {
   };
 
   initializeOnvifDevicesFunctions = () => {
-    this.subscriber.unSubscribe();
+    this.subscriber.destroy();
     this.initializeOnvifDevices(this.config.get('onvif'));
     this.subscriber.withCallback(CALLBACK_TYPES.motion, this.onMotionDetected);
   };

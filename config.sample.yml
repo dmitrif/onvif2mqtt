@@ -2,13 +2,8 @@ mqtt:
   host: 127.0.0.1
   port: 1883
 onvif:
-  - name: device_name_R
-    hostname: 127.0.0.1
-    port: 80
-    username: username11
-    password: password
-  - name: device_name_M
+  - name: device_name
     hostname: 127.0.0.1
     port: 80
     username: username
-    password: password1
+    password: password
