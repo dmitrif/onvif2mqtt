@@ -51,6 +51,6 @@ export default class OnvifSubscriber {
             this.subscribeOnCam();
          }
       });
-    }, Math.floor(Math.random() * Math.floor(5000)));
+    }, Math.floor(Math.random() * 5000));
   };
 }
