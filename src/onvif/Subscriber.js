@@ -31,11 +31,10 @@ export default class OnvifSubscriber {
   onSubscribe = (err) => {
     if (err) {
       this.logger.error(`Failed to connect to ${this.name}`, err);
+    } else {
+      this.logger.info(`Successfully connected.`);
+      this.subscribeOnCam();
     }
-
-    this.logger.info(`Successfully connected.`);
-
-    this.subscribeOnCam();
   };
 
   subscribeOnCam = () => {
