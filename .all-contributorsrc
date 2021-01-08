@@ -13,6 +13,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dmitrif",
+      "name": "Dmitri Farkov",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/655800?v=4",
+      "profile": "https://github.com/dmitrif",
+      "contributions": [
+        "code",
+        "doc",
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
