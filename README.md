@@ -1,6 +1,6 @@
 # ONVIF2MQTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Table of Contents
@@ -203,6 +203,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/dmitrif"><img src="https://avatars0.githubusercontent.com/u/655800?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitri Farkov</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=dmitrif" title="Code">💻</a> <a href="https://github.com/dmitrif/onvif2mqtt/commits?author=dmitrif" title="Documentation">📖</a> <a href="#maintenance-dmitrif" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://casillo.me"><img src="https://avatars0.githubusercontent.com/u/9551125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Domenico Casillo</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=DomenicoCasillo" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/brilthor"><img src="https://avatars2.githubusercontent.com/u/567144?v=4?s=100" width="100px;" alt=""/><br /><sub><b>brilthor</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=brilthor" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/bgilmer77"><img src="https://avatars2.githubusercontent.com/u/7648629?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Gilmer</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=bgilmer77" title="Documentation">📖</a></td>
   </tr>
 </table>
 
