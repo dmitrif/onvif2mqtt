@@ -6,25 +6,21 @@ import process from 'process';
 import validator from './ConfigValidator';
 import merge from 'merge-deep';
 import logger, { setLoggingLevel } from './Logger';
+import chokidar from 'chokidar';
+import isEqual from 'lodash.isequal';
 
 const DEFAULT_CONFIG_PATH = path.resolve(__dirname, '../default-config.yml');
 const CONFIG_PATH = process.env.CONFIG_PATH || '/config/config.yml';
 
 class Config {
-  static instance;
-
   _config;
 
-  constructor() {
-    if (Config.instance) {
-      return instance;
-    }
+  constructor(onConfigChangeCallback) {
 
     this._config = this._loadConfig();
     setLoggingLevel(this.get('log'));
 
-    Config.instance = this;
-    return Config.instance;
+    this.onConfigChange(onConfigChangeCallback);
   }
 
   _loadDefaultConfig = () => {
@@ -77,7 +73,21 @@ class Config {
     return mergedConfig;
   };
 
+  onConfigChange = (callback) => {
+    const watcher = chokidar.watch([DEFAULT_CONFIG_PATH, CONFIG_PATH]);
+    watcher.on('change', async () => {
+      let tempConfig = this._loadConfig();
+      // Check if onvif device config changed. Only this change observe
+      if (tempConfig?.onvif && this._config?.onvif) {
+        if (!isEqual(tempConfig.onvif, this._config.onvif)) {
+          this._config = tempConfig;
+          callback();
+        }
+      }
+    });
+  };
+
   get = path => at(this._config, path)[0];
 }
 
-export default new Config();
+export default Config;

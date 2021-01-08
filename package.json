@@ -15,11 +15,13 @@
   "dependencies": {
     "async-mqtt": "2.5.0",
     "babel-eslint": "10.1.0",
+    "chokidar": "^3.4.3",
     "eslint": "6.8.0",
     "eslint-config-airbnb": "18.1.0",
     "eslint-plugin-import": "2.20.1",
     "i": "0.3.6",
     "lodash.at": "4.6.0",
+    "lodash.isequal": "^4.5.0",
     "merge-deep": "3.0.2",
     "nodemon": "2.0.2",
     "npm": "6.14.4",
