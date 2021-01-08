@@ -199,8 +199,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://github.com/ksupipr"><img src="https://avatars1.githubusercontent.com/u/2247971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Bogatyrev</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=ksupipr" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/dmitrif"><img src="https://avatars0.githubusercontent.com/u/655800?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitri Farkov</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=dmitrif" title="Code">💻</a> <a href="https://github.com/dmitrif/onvif2mqtt/commits?author=dmitrif" title="Documentation">📖</a> <a href="#maintenance-dmitrif" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://github.com/ksupipr"><img src="https://avatars1.githubusercontent.com/u/2247971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Bogatyrev</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=ksupipr" title="Code">💻</a></td>
+    <td align="center"><a href="https://casillo.me"><img src="https://avatars0.githubusercontent.com/u/9551125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Domenico Casillo</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=DomenicoCasillo" title="Code">💻</a></td>
   </tr>
 </table>
 
