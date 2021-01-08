@@ -74,7 +74,7 @@ export default class Manager {
   };
 
   /* Event Callbacks */
-    onMotionDetected = debounceStateUpdate((onvifDeviceId, boolMotionState) => {
+  onMotionDetected = debounceStateUpdate((onvifDeviceId, boolMotionState) => {
     const topicKey = 'motion';
 
     this.publishTemplates(onvifDeviceId, topicKey, boolMotionState);
