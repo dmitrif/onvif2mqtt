@@ -2,8 +2,8 @@ import { Cam } from 'onvif';
 import logger from '../Logger';
 
 export default class OnvifSubscriber {
-  constructor({ 
-    onEvent, 
+  constructor({
+    onEvent,
     onConnect,
     hostname,
     username,
@@ -31,12 +31,25 @@ export default class OnvifSubscriber {
   onSubscribe = (err) => {
     if (err) {
       this.logger.error(`Failed to connect to ${this.name}`, err);
+    } else {
+      this.logger.info(`Successfully connected.`);
+      this.subscribeOnCam();
     }
+  };
 
-    this.logger.info(`Successfully connected.`);
-
-    this.cam.on('event', camMessage => {
-      this.onEvent(this.name, camMessage);
-    });
+  subscribeOnCam = () => {
+    setTimeout(() => {
+      this.cam.createPullPointSubscription((err, _subscription, _xml) => {
+          if (!err) {
+            this.logger.info(`CreatePullPointSubscription ${this.name}`);
+            this.cam.on('event', camMessage => {
+              this.onEvent(this.name, camMessage);
+            });
+         } else {
+            this.logger.error(`CreatePullPointSubscription ${this.name}`);
+            this.subscribeOnCam();
+         }
+      });
+    }, Math.floor(Math.random() * 5000));
   };
 }
