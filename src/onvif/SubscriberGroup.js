@@ -42,11 +42,16 @@ export default class SubscriberGroup {
     }));
   };
 
+  _simpleItemsToObject = (items) => {
+    return items.reduce((out, item) => { out[item.$.Name] = item.$.Value; return out; }, {})
+  };
+
   onSubscriberEvent = (subscriberName, event) => {
     const [namespace, eventType] = event.topic._.split(NAMESPACE_DELIMITER);
     
     const callbackType = EVENTS[eventType];
-    const eventValue = event.message.message.data.simpleItem.$.Value;
+    const simpleItem = event.message.message.data.simpleItem;
+    const eventValue = _simpleItemsToObject(simpleItem instanceof(Array) ? simpleItem : [simpleItem]);
 
     this.logger.trace('ONVIF received', { subscriberName, eventType, eventValue });
 
