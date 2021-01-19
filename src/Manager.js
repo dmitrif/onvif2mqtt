@@ -12,7 +12,7 @@ const convertBooleanToSensorState = bool => bool ? 'ON' : 'OFF';
 export default class Manager {
   constructor() {
     this.logger = logger.child({ name: 'Manager' });
-
+    
     this.init();
   }
 
@@ -32,7 +32,7 @@ export default class Manager {
       const { name } = onvifDevice;
 
       await this.subscriber.addSubscriber(onvifDevice);
-
+      
       this.onMotionDetected(name, false);
     });
   };
@@ -59,12 +59,10 @@ export default class Manager {
       this.publisher.publish(onvifDeviceId, interpolatedSubtopic, interpolatedTemplate, retain);
     });
   };
-
+  
   /* Event Callbacks */
-  onMotionDetected = debounceStateUpdate((onvifDeviceId, motionState) => {
+  onMotionDetected = debounceStateUpdate((onvifDeviceId, boolMotionState) => {
     const topicKey = 'motion';
-
-    const boolMotionState = motionState.IsMotion;
 
     this.publishTemplates(onvifDeviceId, topicKey, boolMotionState);
     this.publisher.publish(onvifDeviceId, topicKey, convertBooleanToSensorState(boolMotionState));
