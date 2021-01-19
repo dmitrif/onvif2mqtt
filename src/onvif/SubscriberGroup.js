@@ -10,7 +10,9 @@ export const CALLBACK_TYPES = {
 };
 
 const EVENTS = {
-  'RuleEngine/CellMotionDetector/Motion': CALLBACK_TYPES.motion
+  'RuleEngine/CellMotionDetector/Motion': CALLBACK_TYPES.motion,
+  'RuleEngine/CellMotionDetector/Motion//.': CALLBACK_TYPES.motion,
+  'VideoSoure/MotionAlarm': CALLBACK_TYPES.motion
 };
 
 const DEFAULT_CALLBACKS = {
@@ -42,9 +44,17 @@ export default class SubscriberGroup {
     }));
   };
 
+  destroy = () => {
+    this.subscribers.forEach((item) => {
+      item.cam = null;
+      item = null;
+    });
+    this.subscribers.length = 0;
+  };
+
   onSubscriberEvent = (subscriberName, event) => {
     const [namespace, eventType] = event.topic._.split(NAMESPACE_DELIMITER);
-    
+
     const callbackType = EVENTS[eventType];
     const eventValue = event.message.message.data.simpleItem.$.Value;
 

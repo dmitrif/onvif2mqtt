@@ -34,4 +34,15 @@ export default class MqttPublisher {
       this.logger.error('Failed to publish', { error: e, topic, value, retain });
     }
   };
+
+  publish_service_status = async (value ,retain = true) => {
+    const topic = `onvif2mqtt/status`;
+
+    try {
+      this.logger.debug('Publishing.', { topic, value, retain });
+      await this.client.publish(`onvif2mqtt/status`, value, { retain });
+    } catch (e) {
+      this.logger.error('Failed to publish', { error: e, topic, value, retain });
+    }
+  };
 }

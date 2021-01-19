@@ -1,4 +1,7 @@
 # ONVIF2MQTT
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Table of Contents
 * [ONVIF2MQTT](#onvif2mqtt)
@@ -36,9 +39,14 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 - At least one ONVIF compatible device implementing events.
 
 ## Hardware Compatibility
-- EZViz DB1 Doorbell (flashed with LaView firmware) - **TESTED**
-- Nelly's Security Doorbell (NSC-DB2)
+- EZViz DB-1 Doorbell (flashed with LaView firmware) - **TESTED**
+- EZViz DB-1 Doorbell (flashed with HikVision 200321 firmware) - **TESTED**
+- Nelly's Security Doorbell (NSC-DB2) (flashed with Nelly's v5.2.4 191216 firmware) - **TESTED**
 - Laview Halo One Doorbell - **TESTED**
+- SV3C SV-B01POE-5MPL-A - **TESTED**
+- IMOU cue 2 - **TESTED**
+- Provision ISR I3-340IP536+ - **TESTED**
+- Provision ISR I4-340IP5MVF - **TESTED**
 - RCA HSDB2A Doorbell (flashed with LaView firmware)
 - Hikvision DB2 - **Does not work, TODO: implement push point subscriptions.**
 - Any other ONVIF compliant IP Camera - if it works for you please let me know so that this list can be updated.
@@ -181,3 +189,29 @@ binary_sensor doorbell_motion:
 
 ### Getting  Started
 Simplest way forward is to base your configuration off [`config.sample.yml`](https://github.com/dmitrif/onvif2mqtt/blob/master/config.sample.yml).
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/ksupipr"><img src="https://avatars1.githubusercontent.com/u/2247971?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Bogatyrev</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=ksupipr" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/dmitrif"><img src="https://avatars0.githubusercontent.com/u/655800?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Dmitri Farkov</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=dmitrif" title="Code">💻</a> <a href="https://github.com/dmitrif/onvif2mqtt/commits?author=dmitrif" title="Documentation">📖</a> <a href="#maintenance-dmitrif" title="Maintenance">🚧</a></td>
+    <td align="center"><a href="https://casillo.me"><img src="https://avatars0.githubusercontent.com/u/9551125?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Domenico Casillo</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=DomenicoCasillo" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/brilthor"><img src="https://avatars2.githubusercontent.com/u/567144?v=4?s=100" width="100px;" alt=""/><br /><sub><b>brilthor</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=brilthor" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/bgilmer77"><img src="https://avatars2.githubusercontent.com/u/7648629?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brad Gilmer</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=bgilmer77" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/DJTim"><img src="https://avatars1.githubusercontent.com/u/4507858?v=4?s=100" width="100px;" alt=""/><br /><sub><b>DJTim</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=DJTim" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/benedikt45"><img src="https://avatars3.githubusercontent.com/u/14279749?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Roman</b></sub></a><br /><a href="https://github.com/dmitrif/onvif2mqtt/commits?author=benedikt45" title="Code">💻</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
