@@ -74,8 +74,9 @@ export default class Manager {
   };
 
   /* Event Callbacks */
-  onMotionDetected = debounceStateUpdate((onvifDeviceId, boolMotionState) => {
+  onMotionDetected = debounceStateUpdate((onvifDeviceId, motionState) => {
     const topicKey = 'motion';
+    const boolMotionState = motionState.IsMotion;
 
     this.publishTemplates(onvifDeviceId, topicKey, boolMotionState);
     this.publisher.publish(onvifDeviceId, topicKey, convertBooleanToSensorState(boolMotionState));
