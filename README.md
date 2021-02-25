@@ -1,6 +1,7 @@
 # ONVIF2MQTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt?ref=badge_shield)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Table of Contents
@@ -216,3 +217,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt?ref=badge_large)
