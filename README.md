@@ -2,6 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt?ref=badge_shield)
 
 ## Table of Contents
 * [ONVIF2MQTT](#onvif2mqtt)
