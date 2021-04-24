@@ -51,6 +51,7 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 - RCA HSDB2A Doorbell (flashed with LaView firmware)
 - Reolink E1 Pro - **TESTED**
 - Hikvision DB2 - **Does not work, TODO: implement push point subscriptions.**
+- Annke C800 (1. generation - turret with separate lens and IR LED) - **TESTED** (all motion areas are combined)
 - Any other ONVIF compliant IP Camera - if it works for you please let me know so that this list can be updated.
 
 ## Supported Events
