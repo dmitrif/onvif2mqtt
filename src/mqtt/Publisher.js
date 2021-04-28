@@ -12,8 +12,8 @@ export default class MqttPublisher {
   constructor(userOptions) {
     this.options = { ...DEFAULT_OPTIONS, ...userOptions };
 
-    const { host, port } = this.options;
-    this.logger = logger.child({ name: 'MQTT', hostname: `${host}:${port}` });
+    const { host, port, clientId } = this.options;
+    this.logger = logger.child({ name: 'MQTT', hostname: `${host}:${port} ${clientId || ''}` });
   }
 
   connect = async () => {

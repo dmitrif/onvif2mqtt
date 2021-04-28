@@ -31,6 +31,7 @@ const configSchema = new Schema({
     port: {
       required: true,
     },
+    clientId: String,
     username: String,
     password: String,
   },

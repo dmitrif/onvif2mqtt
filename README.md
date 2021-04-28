@@ -147,6 +147,7 @@ mqtt:
   port: 1883
   username: user
   password: password
+  clientId: clientId
 # All of your ONVIF devices
 onvif:
   # Name for the device (used in MQTT topic)
