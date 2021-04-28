@@ -2,6 +2,7 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt?ref=badge_shield)
 
 ## Table of Contents
 * [ONVIF2MQTT](#onvif2mqtt)
@@ -48,6 +49,7 @@ After acquiring an EzViz DB1 camera doorbell, I was happy to find a PIR sensor o
 - Provision ISR I3-340IP536+ - **TESTED**
 - Provision ISR I4-340IP5MVF - **TESTED**
 - RCA HSDB2A Doorbell (flashed with LaView firmware)
+- Reolink E1 Pro - **TESTED**
 - Hikvision DB2 - **Does not work, TODO: implement push point subscriptions.**
 - Any other ONVIF compliant IP Camera - if it works for you please let me know so that this list can be updated.
 
@@ -215,3 +217,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fdmitrif%2Fonvif2mqtt?ref=badge_large)
