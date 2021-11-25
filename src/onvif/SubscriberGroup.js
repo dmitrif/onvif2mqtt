@@ -10,6 +10,8 @@ export const CALLBACK_TYPES = {
 };
 
 const EVENTS = {
+  'RuleEngine/MotionRegionDetector/Motion': CALLBACK_TYPES.motion,
+  'RuleEngine/MotionRegionDetector/Motion//.': CALLBACK_TYPES.motion,
   'RuleEngine/CellMotionDetector/Motion': CALLBACK_TYPES.motion,
   'RuleEngine/CellMotionDetector/Motion//.': CALLBACK_TYPES.motion,
   'VideoSoure/MotionAlarm': CALLBACK_TYPES.motion,
