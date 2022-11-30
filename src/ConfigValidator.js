@@ -10,6 +10,7 @@ const configSchema = new Schema({
       mustMatchLogLevels: val => pinoLogLevels.includes(val),
     },
   },
+  topics: Object,
   api: {
     templates: [{
       subtopic: {
@@ -50,6 +51,7 @@ const configSchema = new Schema({
       },
       username: String,
       password: String,
+      topics: Object,
     }
   }
 });

@@ -7,23 +7,33 @@ const NAMESPACE_DELIMITER = ':';
 
 export const CALLBACK_TYPES = {
   motion: 'onMotionDetected',
+  generic: 'onGenericDetected',
 };
 
 const EVENTS = {
+  // motion
   'RuleEngine/MotionRegionDetector/Motion': CALLBACK_TYPES.motion,
   'RuleEngine/MotionRegionDetector/Motion//.': CALLBACK_TYPES.motion,
   'RuleEngine/CellMotionDetector/Motion': CALLBACK_TYPES.motion,
   'RuleEngine/CellMotionDetector/Motion//.': CALLBACK_TYPES.motion,
   'VideoSoure/MotionAlarm': CALLBACK_TYPES.motion,
-  'VideoSource/MotionAlarm': CALLBACK_TYPES.motion
+  'VideoSource/MotionAlarm': CALLBACK_TYPES.motion,
+  // doorbell
+  // 'RuleEngine/MyRuleDetector/Visitor': CALLBACK_TYPES.visitor,
+  // people
+  // 'RuleEngine/MyRuleDetector/FaceDetect': CALLBACK_TYPES.face,
+  // 'RuleEngine/MyRuleDetector/PeopleDetect': CALLBACK_TYPES.face,
+  // 'RuleEngine/MyRuleDetector/VehicleDetect': CALLBACK_TYPES.vehicle,
+  // 'RuleEngine/MyRuleDetector/DogCatDetect': CALLBACK_TYPES.pet,
 };
 
 const DEFAULT_CALLBACKS = {
   [CALLBACK_TYPES.motion]: NO_OP,
+  [CALLBACK_TYPES.generic]: NO_OP,
 };
 
 export default class SubscriberGroup {
-  subscribers = [];
+  subscribers = {};
 
   constructor(callbacks) {
     this.callbacks = {
@@ -41,18 +51,18 @@ export default class SubscriberGroup {
   };
 
   addSubscriber = (subscriberConfig) => {
-    this.subscribers.push(new Subscriber({
+    this.subscribers[subscriberConfig.name] = new Subscriber({
       ...subscriberConfig,
       onEvent: this.onSubscriberEvent,
-    }));
+    });
   };
 
   destroy = () => {
-    this.subscribers.forEach((item) => {
+    Object.values(this.subscribers).forEach((item) => {
       item.cam = null;
       item = null;
     });
-    this.subscribers.length = 0;
+    this.subscribers = {};
   };
 
   _simpleItemsToObject = (items) => {
@@ -68,6 +78,14 @@ export default class SubscriberGroup {
 
     this.logger.trace('ONVIF received', { subscriberName, eventType, eventValue });
 
-    this.callbacks[callbackType](subscriberName, eventValue);
+    try {
+      if (callbackType) {
+        this.callbacks[callbackType](subscriberName, eventValue);
+      } else {
+        this.callbacks[CALLBACK_TYPES.generic](subscriberName, eventValue, eventType);
+      }
+    } catch (e) {
+      this.logger.error('onSubscriberEvent', e.message);
+    }
   };
 }

@@ -69,7 +69,11 @@ class Config {
       userConfig
     );
 
-    this._validate(mergedConfig);
+    // FIXME: validation is removing object keys if type is Object...
+    // this._validate({ ...mergedConfig });
+    // logger.info('config:default', defaultConfig);
+    // logger.info('config:user', userConfig);
+    // logger.info('config:merge', mergedConfig);
     return mergedConfig;
   };
 
