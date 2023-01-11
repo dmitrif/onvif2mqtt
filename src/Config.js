@@ -10,7 +10,7 @@ import chokidar from 'chokidar';
 import isEqual from 'lodash.isequal';
 
 const DEFAULT_CONFIG_PATH = path.resolve(__dirname, '../default-config.yml');
-const CONFIG_PATH = process.env.CONFIG_PATH || '/config/config.yml';
+const CONFIG_PATH = process.env.CONFIG_PATH || path.resolve(__dirname, '../config.yml');
 
 class Config {
   _config;
