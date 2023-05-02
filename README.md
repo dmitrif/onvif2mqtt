@@ -1,3 +1,5 @@
+> :warning: **Unmaintained**: Due to lack of time, this project is currently not maintained. We are searching for active contributors / maintainers. If interested, please message @dmitrif
+
 # ONVIF2MQTT
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
