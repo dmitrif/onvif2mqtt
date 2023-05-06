@@ -1,4 +1,5 @@
 log: debug
+topics:
 api:
   templates:
 mqtt:

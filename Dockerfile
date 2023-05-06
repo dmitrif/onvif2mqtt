@@ -1,8 +1,8 @@
-FROM node:12.16.1
+FROM node:16-alpine
 
 WORKDIR /onvif2mqtt
 ADD . /onvif2mqtt
 
-RUN npm install && npm run build 
+RUN npm ci && npm run build
 
 CMD npm start

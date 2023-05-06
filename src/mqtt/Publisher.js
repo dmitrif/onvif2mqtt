@@ -35,7 +35,7 @@ export default class MqttPublisher {
     }
   };
 
-  publish_service_status = async (value ,retain = true) => {
+  publishServiceStatus = async (value , retain = true) => {
     const topic = `onvif2mqtt/status`;
 
     try {
